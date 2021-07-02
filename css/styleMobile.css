@@ -1,0 +1,746 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+h4 {
+  margin: 15px 5px;
+}
+
+a {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+  margin-bottom: 5px !important;
+}
+
+.conteiner {
+  width: 100%;
+  height: 400%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  background-image: url(../img/blue.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation-name: backgroundFundo;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  overflow-x: hidden;
+}
+
+#header {
+  width: 101.3%;
+  height: 25%;
+  z-index: 10;
+}
+
+#header nav {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header nav div a {
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  text-decoration: none !important;
+}
+
+#contato {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0px !important;
+}
+
+#contato button {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-brand {
+  border: none !important;
+  cursor: default;
+}
+
+.navbar-brand:hover {
+  margin-bottom: 0px !important;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.logo div div:nth-child(1) {
+  padding-top: 15px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu ul {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 0px !important;
+  margin-left: 7.5%;
+}
+
+.menu ul li {
+  width: 100%;
+  height: 25%;
+  margin: 0px !important;
+  padding: 10px;
+  text-align: center;
+}
+
+.menu ul li a {
+  width: 50%;
+  color: white !important;
+  margin-top: 0px !important;
+  margin-left: 25% !important;
+  margin-right: 25% !important;
+}
+
+.menu form {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end !important;
+}
+
+.menu form button {
+  width: 100px;
+  height: 40px;
+}
+
+#form {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form p {
+  width: 100%;
+  height: 20%;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 2vh;
+  color: red;
+  visibility: hidden;
+}
+
+#form fieldset {
+  width: 80%;
+  height: 80%;
+  padding: 20px;
+  border: solid 1px;
+  border-color: rgba(77, 77, 77, 0.1);
+  background-color: rgba(140, 140, 140, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#form fieldset label input {
+  width: 70%;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: black;
+}
+
+#form fieldset label:nth-child(5) {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 40%;
+}
+
+#form fieldset label:nth-child(5) input {
+  width: 100%;
+  height: 80%;
+}
+
+.conteudoMenu {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  padding-bottom: 350px;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.conteudoMenu div {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.conteudoMenu div figure {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0;
+}
+
+.conteudoMenu div figure img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border: 3px solid white;
+  margin: 15px;
+  object-fit: cover;
+  animation-name: figure;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+.conteudoMenu div div {
+  margin: 2% 5%;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0px;
+}
+
+.titulos h1 {
+  width: 70%;
+  text-align: center;
+  margin: 0px;
+  padding: 1px;
+  border: 3px solid white;
+  font-family: "Dancing Script", cursive;
+  font-size: 3.5vh !important;
+  animation-duration: 10s;
+  animation-name: titulo;
+  animation-iteration-count: infinite;
+  border-radius: 30px;
+}
+
+.titulos h2 {
+  font-size: 2vh;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+.informacoes {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 3vh;
+}
+
+.informacoes section {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding-bottom: 0px;
+}
+
+.informacoes section p {
+  font-size: 3.5vh;
+  padding: 5px;
+  font-family: "Amatic SC", cursive;
+}
+
+#main {
+  width: 100%;
+  height: 150%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+#conteudoPrincipal {
+  width: 100%;
+  height: 99.5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#cortina,
+#cortinaf1,
+#cortinaf2,
+#cortinaf3,
+#cortinaf4,
+#cortinaex1,
+#cortinaex2,
+#cortinaex3,
+#cortinaex4,
+#cortinaev1,
+#cortinaev2,
+#cortinaev3,
+#cortinaev4 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  top: 0px;
+  z-index: 15;
+  transition: 0.5s;
+  display: none;
+}
+
+#modal,
+#modalf1,
+#modalf2,
+#modalf3,
+#modalf4,
+#modalex1,
+#modalex2,
+#modalex3,
+#modalex4,
+#modalev1,
+#modalev2,
+#modalev3,
+#modalev4 {
+  width: 35vh;
+  height: 98.5vh;
+  background-color: white;
+  margin: auto;
+  margin-top: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px #000;
+  position: relative;
+  transition: 1s;
+  overflow-y: auto;
+}
+
+#modal {
+  overflow-y: hidden;
+}
+
+.fecharModal {
+  width: 15%;
+  height: 5%;
+  margin-bottom: 5px;
+  float: right;
+  font-size: 2.5vh;
+  color: black;
+  text-align: center;
+  background: none;
+  transition: 0.4s;
+}
+
+.fecharModal:hover {
+  transition: 0.4s;
+  background-color: red;
+  color: white;
+}
+
+#modal form {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menuModal {
+  width: 100%;
+  height: 22%;
+  padding: 30px;
+  line-height: 70px;
+  text-align: center;
+  margin: 0px;
+}
+
+.conteudoModal {
+  height: 72% auto;
+  padding: 10px;
+  margin: 20px;
+  border: solid 1px;
+  border-color: rgba(77, 77, 77, 0.1);
+  background-color: rgba(140, 140, 140, 0.05);
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#resultado {
+  color: green;
+}
+
+.quadros {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.quadros div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#formacao,
+#experiencia,
+#eventos {
+  width: 100%;
+  height: 3.7%;
+  padding: 5px;
+  margin: 2px;
+  text-align: center;
+  color: white;
+  background-color: rgb(0, 158, 221);
+}
+
+.quadros div section {
+  width: 98%;
+  height: 300px;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: solid 1px;
+  border-color: rgba(0, 0, 0, 0.11);
+}
+
+.quadros div section:nth-child(1):hover {
+  position: relative;
+}
+
+.quadros div section:hover {
+  transition: 0.3s;
+  box-shadow: 0px 0px 15px -5px rgb(0, 214, 221);
+  transform: scale(1.005);
+}
+
+.quadros div section figure {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.quadros div section figure img {
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quadros div section h3 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.quadros div section p {
+  font-size: 0.8em;
+}
+.quadros div section button {
+  width: 100px;
+  height: 30px;
+  font-size: 1.2em;
+  background-color: white;
+  border-bottom: 2px solid;
+  border-color: rgb(2, 194, 201);
+  color: rgb(2, 194, 201);
+}
+
+#fechar {
+  width: 100%;
+  height: 5%;
+  margin: 5px;
+  padding-left: 97%;
+  color: black !important;
+  font-size: 1.8em;
+}
+
+#fechar:hover {
+  border-bottom: 0px;
+}
+
+#footer {
+  width: 100%;
+  height: 25%;
+  z-index: 15;
+}
+
+.conteudoRodape {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#icones {
+  width: 100%;
+  height: 60%;
+  color: white;
+}
+
+#icones figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+}
+
+#icones figure a {
+  width: 50px;
+  height: 50px;
+  line-height: 55px;
+  border-radius: 50px;
+  text-align: center;
+  transition: 1s;
+}
+
+#icones figure a:hover {
+  margin-bottom: 0px !important;
+  border: solid white 1px;
+}
+
+#icones figure a:nth-child(1) {
+  background-color: rgb(0, 183, 255);
+}
+
+#icones figure a:nth-child(2) {
+  background-image: url(../img/instagram-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#icones figure a:nth-child(3) {
+  background-color: red;
+}
+
+#icones figure a:nth-child(4) {
+  background-color: rgb(77, 77, 77);
+}
+
+#icones figure a i {
+  margin-top: 0px;
+  font-size: 3vh;
+  background: none;
+  color: white;
+}
+
+#copyright {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 1.5vh;
+  font-weight: bold;
+}
+
+#copyright p {
+  margin: 0px;
+}
+
+#buttonsRodape {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#buttonsRodape a:hover {
+  color: black !important;
+  border: none;
+}
+
+#buttonsRodape button {
+  font-size: 2vh;
+  padding: 5px;
+  background: none;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#buttonsRodape button:hover {
+  transform: scale(1.1);
+  color: black;
+  background-color: white;
+}
+
+#botaoA {
+  margin: 0;
+  border: 0;
+}
+
+#botao {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  z-index: 20;
+  top: 850px;
+  right: 40px;
+  border-radius: 60px;
+  background-color: rgb(0, 140, 255);
+  object-fit: cover;
+  object-position: center;
+}
+
+#botao:hover {
+  cursor: pointer;
+}
+
+@keyframes backgroundFundo {
+  0% {
+    background-image: url(../img/blue.png);
+    transition: 15s;
+  }
+  25% {
+  }
+  50% {
+    background-image: url(../img/dark.jpg);
+    transition: 15s;
+  }
+  75% {
+  }
+  100% {
+    background-image: url(../img/blue.png);
+    transition: 15s;
+  }
+}
+
+@keyframes nameFooter {
+  0% {
+    text-shadow: 0px 0px 0px white;
+    transition: 15s;
+  }
+
+  25% {
+  }
+
+  50% {
+    text-shadow: 0px 0px 10px white;
+    transition: 15s;
+  }
+
+  75% {
+  }
+
+  100% {
+    text-shadow: 0px 0px 0px white;
+    transition: 15s;
+  }
+}
+
+@keyframes titulo {
+  0% {
+    color: white;
+
+    transition: 15s;
+  }
+
+  25% {
+  }
+
+  50% {
+    color: rgb(38, 255, 255);
+    border-color: rgb(0, 255, 255);
+    box-shadow: 0px 0px 100px rgb(0, 255, 255);
+    text-shadow: 0px 0px 10px rgb(143, 255, 255);
+    transition: 15s;
+  }
+
+  75% {
+  }
+
+  100% {
+    color: white;
+
+    transition: 15s;
+  }
+}
+
+@keyframes figure {
+  0% {
+  }
+
+  25% {
+  }
+
+  50% {
+    border-color: rgb(0, 214, 221);
+    box-shadow: 0px 0px 100px rgb(0, 214, 221);
+    transition: 15s;
+  }
+
+  75% {
+  }
+
+  100% {
+  }
+}
